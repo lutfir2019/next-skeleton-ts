@@ -1,10 +1,10 @@
-import type { Metadata } from "next";
 import "./globals.css";
+import type { Metadata } from "next";
 import LoadingPage from "@/components/global/modal/loadingPage";
 import NotificationPage from "@/components/global/modal/notif";
+import { ThemeProvider } from "@/components/theme-provider";
 import { Inter as FontSans } from "next/font/google";
 import { cn } from "@/lib/utils";
-import { ThemeProvider } from "@/components/theme-provider";
 
 const fontSans = FontSans({
   subsets: ["latin"],
