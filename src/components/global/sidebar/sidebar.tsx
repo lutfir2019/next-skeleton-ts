@@ -7,6 +7,7 @@ import { IconType } from "react-icons/lib";
 import { usePathname } from "next/navigation";
 import { FaBarsStaggered } from "react-icons/fa6";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
+import { ToggleTheme } from "../button/toggle-theme";
 
 interface Children {
   children: React.ReactNode;
@@ -88,6 +89,9 @@ const Sidebar = ({ children }: Children) => {
               )
             )}
           </ul>
+          <div className="flex py-10 justify-center items-center">
+            <ToggleTheme />
+          </div>
         </div>
       </aside>
 

@@ -33,7 +33,7 @@ const createAxiosInstance = () => {
     (error: AxiosError) => {
       loadingStore.setLoading({ is_loading: false });
       console.error("Response error:", error);
-      if (error.code == "NETWORK_ERROR") {
+      if (error.code == "ERR_NETWORK") {
         layoutStore.setLayout({
           show: true,
           title: "Error",

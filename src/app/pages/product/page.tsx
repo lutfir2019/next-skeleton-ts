@@ -57,7 +57,7 @@ const Page = () => {
       {productStore.is_loading && "Loading..."}
       <ButtonBase
         theme="primary"
-        onClick={() => layoutStore.setLayout({ show: true })}
+        onClick={() => layoutStore.setLayout({ show: true, message: "asdasdads" })}
       >
         test
       </ButtonBase>
@@ -65,8 +65,9 @@ const Page = () => {
         Modal
       </ButtonBase>
       {isOpen}
-      <Modal open={isOpen}>
-        <div className="flex flex-col w-[50%] p-10 bg-white rounded-lg">
+      <Modal open={isOpen} onClose={setIsOpen} zIndex="z-50" className="bg-transparent">
+        <div className="flex justify-center">
+          <div className="flex flex-col bg-white w-[50%] p-10 text-black rounded-lg">
           <p className="text-justify">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi omnis
             culpa alias excepturi perspiciatis, amet porro, ea deserunt voluptas
@@ -84,6 +85,7 @@ const Page = () => {
           <button type="button" onClick={() => setIsOpen(false)}>
             close
           </button>
+          </div>
         </div>
       </Modal>
     </div>
